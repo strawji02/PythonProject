@@ -1,0 +1,778 @@
+
+ <html>
+<head>
+<title>일반열람실 좌석현황</title>
+<meta http-equiv="keywords"     content="일반열람실,좌석현황,호디,hodi" />
+<meta http-equiv="description"  content="좌석 현황" />
+<meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+<meta http-equiv="content-script-type" content="text/javascript">
+<meta http-equiv="window-target" content="_top">
+<meta name="generator" content="microsoft frontpage 4.0">
+<meta name="progid" content="frontpage.editor.document">
+<meta name="robots" content="noindex,follow">
+<meta name="generator"   content="editplus">
+<meta name="description" content="(주)호디">
+<meta name="subject"     content="seatmate v3.0">
+<meta name="title"       content="열람실">
+<meta name="author"      content="(주)호디">
+<meta name="publisher"   content="(주)호디">
+<meta name="other agent" content="(주)호디">
+<meta name="date"        content="2008년08월01일">
+<meta name="keywords"    content="좌석발급시스템,열람실">
+<link rel="shortcut icon" href="./images/seatmate.ico">
+<style>
+
+body, table, tr, td, select, input, div, form, textarea {
+}
+
+
+body{
+   scrollbar-face-color:  #DDDDDD;
+   scrollbar-arrow-color: #DDDDDD;
+   scrollbar-track-color: #DDDDDD;
+   scrollbar-highlight-color: #DDDDDD;
+   scrollbar-3dlight-color: #DDDDDD;
+   scrollbar-shadow-color: #DDDDDD;
+   scrollbar-darkshadow-color: #DDDDDD
+   scrolling: no;
+   padding: 0px;
+   margin: 0px;
+   font-family:굴림;
+
+}
+
+IMG {border: none;}
+
+/* 메뉴버튼 */
+.seatFont {
+    text-align: center;
+    font-size: 9pt;
+    padding-top:5px;
+    padding-left:8px;
+    padding-right:8px;
+    text-decoration:none;
+    font-weight: bolder;
+
+}
+
+.total{
+  font-family:굴림;
+  text-decoration:none;
+  color:#F1F4FC;
+  font-size: 10pt;
+  font-weight: bolder;
+}
+
+.total8{
+  font-family:굴림;
+  text-decoration:none;
+  color:#ffffff;
+  font-size: 9pt;
+}
+
+
+
+.menu_button {
+   text-align:center;
+   cursor:pointer;
+   border-left:  #503433 0px solid;
+   border-top:   #503433 0px solid;
+   border-right: #503433 0px solid;
+   border-bottom:#503433 0px solid;
+   filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr=#B1BF50,startColorstr=#D1DD7C,gradientType=0);
+}
+</style>
+<script language="JavaScript">
+<!--
+function pdp() {
+  var me_width;
+  var me_height;
+
+  var win_width   = "1024";
+  var win_height  = "768";
+
+  me_width = (window.screen.width/2) - (win_width/2);
+  me_height = (window.screen.height/2) - (win_height/2);
+  me_height = me_height - 30;
+
+  var win2 = window.open('/seatmate_es/','SeatMate','height='+win_height+',width='+win_width+',left='+me_width+',top='+me_height+',screenX='+me_width
++',screenY='+me_height+',resizable=no,menubar=no,scrollbars=on,'+',location=no,status=no');
+  win2.focus();
+}
+document.onkeydown = function() {
+    if (event.keyCode == 116) event.keyCode = 505;
+    if (event.keyCode == 122) event.keyCode = 505;
+    if (event.keyCode == 505) return false;
+}
+//-->
+</script>
+<!--// <body bgcolor="#ffffff" oncontextmenu="return false"  onselectstart="return false" ondragstart="return false"  onkeydown="return false"> //-->
+<body bgproperties="fixed" bgcolor="#333333">
+<!--// 전체범위 //-->
+<table border="0" align="center" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+    <!--// 상위메뉴 //-->
+    <table border="0" width="1000" height="70" cellspacing="0" cellpadding="0" background="./images/top_br.jpg">
+    <tr>
+     <td width="200" align="right"><img src="./images/logo.gif" width="192" alt="로그이미지"> </td>
+     <td valign="bottom" align="center">
+        <!--// 메뉴 //-->
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+                    <td align="center">
+                <!--// 메뉴버튼//-->
+                <table  border="0" cellpadding="0" cellspacing="0" onclick="location.replace('?classInfo=1')" title="제1 열람실&nbsp;&nbsp;<br>&nbsp;&nbsp;(칸막이)">
+                  <tr>
+                    <td width="3" height="4"><img src="./images/img/on01.gif" width="3" height="4" /></td>
+                    <td background="./images/img/on02.gif"></td>
+                    <td width="3" height="4"><img src="./images/img/on03.gif" width="3" height="4" /></td>
+                  </tr>
+                  <tr>
+                    <td background="./images/img/on04.gif"></td>
+                    <td height="22" class="menu_button"><font class="seatFont" color="#000000">제1 열람실&nbsp;&nbsp;<br>&nbsp;&nbsp;(칸막이)</font></td>
+                    <td background="./images/img/on05.gif"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="./images/img/on06.gif" width="3" height="4" /></td>
+                    <td background="./images/img/on07.gif"></td>
+                    <td><img src="./images/img/on08.gif" width="3" height="4" /></td>
+                  </tr>
+                </table>
+
+            </td>
+            <td width="5"></td>
+                                   <td align="center">
+                <!--// 메뉴버튼//-->
+                <table  border="0" cellpadding="0" cellspacing="0" onclick="location.replace('?classInfo=2')" title="제1 열람실&nbsp;&nbsp;<br>&nbsp;&nbsp;(개방)">
+                  <tr>
+                    <td width="3" height="4"><img src="./images/img/on01.gif" width="3" height="4" /></td>
+                    <td background="./images/img/on02.gif"></td>
+                    <td width="3" height="4"><img src="./images/img/on03.gif" width="3" height="4" /></td>
+                  </tr>
+                  <tr>
+                    <td background="./images/img/on04.gif"></td>
+                    <td height="22" class="menu_button"><font class="seatFont" color="#000000">제1 열람실&nbsp;&nbsp;<br>&nbsp;&nbsp;(개방)</font></td>
+                    <td background="./images/img/on05.gif"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="./images/img/on06.gif" width="3" height="4" /></td>
+                    <td background="./images/img/on07.gif"></td>
+                    <td><img src="./images/img/on08.gif" width="3" height="4" /></td>
+                  </tr>
+                </table>
+
+            </td>
+            <td width="5"></td>
+                                   <td align="center">
+                <!--// 메뉴버튼//-->
+                <table  border="0" cellpadding="0" cellspacing="0" onclick="location.replace('?classInfo=3')" title="제2 열람실&nbsp;&nbsp;<br>&nbsp;&nbsp;(칸막이)">
+                  <tr>
+                    <td width="3" height="4"><img src="./images/img/on01.gif" width="3" height="4" /></td>
+                    <td background="./images/img/on02.gif"></td>
+                    <td width="3" height="4"><img src="./images/img/on03.gif" width="3" height="4" /></td>
+                  </tr>
+                  <tr>
+                    <td background="./images/img/on04.gif"></td>
+                    <td height="22" class="menu_button"><font class="seatFont" color="#000000">제2 열람실&nbsp;&nbsp;<br>&nbsp;&nbsp;(칸막이)</font></td>
+                    <td background="./images/img/on05.gif"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="./images/img/on06.gif" width="3" height="4" /></td>
+                    <td background="./images/img/on07.gif"></td>
+                    <td><img src="./images/img/on08.gif" width="3" height="4" /></td>
+                  </tr>
+                </table>
+
+            </td>
+            <td width="5"></td>
+                                   <td align="center">
+                <!--// 메뉴버튼//-->
+                <table  border="0" cellpadding="0" cellspacing="0" onclick="location.replace('?classInfo=4')" title="제2 열람실&nbsp;&nbsp;<br>&nbsp;&nbsp;(개방)">
+                  <tr>
+                    <td width="3" height="4"><img src="./images/img/on01.gif" width="3" height="4" /></td>
+                    <td background="./images/img/on02.gif"></td>
+                    <td width="3" height="4"><img src="./images/img/on03.gif" width="3" height="4" /></td>
+                  </tr>
+                  <tr>
+                    <td background="./images/img/on04.gif"></td>
+                    <td height="22" class="menu_button"><font class="seatFont" color="#000000">제2 열람실&nbsp;&nbsp;<br>&nbsp;&nbsp;(개방)</font></td>
+                    <td background="./images/img/on05.gif"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="./images/img/on06.gif" width="3" height="4" /></td>
+                    <td background="./images/img/on07.gif"></td>
+                    <td><img src="./images/img/on08.gif" width="3" height="4" /></td>
+                  </tr>
+                </table>
+
+            </td>
+            <td width="5"></td>
+                                   <td align="center">
+                <!--// 메뉴버튼//-->
+                <table  border="0" cellpadding="0" cellspacing="0" onclick="location.replace('?classInfo=5')" title="노트북실">
+                  <tr>
+                    <td width="3" height="4"><img src="./images/over/over01.gif" width="3" height="4" /></td>
+                    <td background="./images/over/over02.gif"></td>
+                    <td width="3" height="4"><img src="./images/over/over03.gif" width="3" height="4" /></td>
+                  </tr>
+                  <tr>
+                    <td background="./images/over/over04.gif"></td>
+                    <td height="22" class="menu_button"><font class="seatFont" color="#ffffff">노트북실</font></td>
+                    <td background="./images/over/over05.gif"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="./images/over/over06.gif" width="3" height="4" /></td>
+                    <td background="./images/over/over07.gif"></td>
+                    <td><img src="./images/over/over08.gif" width="3" height="4" /></td>
+                  </tr>
+                </table>
+
+            </td>
+            <td width="5"></td>
+                                </tr>
+         <tr>
+            <td height="7"></td>
+         </tr>
+         </table>
+     </td>
+     <td width="275" >
+            <!--// 알림현황 //-->
+            <table border="0" width="300" style="background-image:url('./images/top_note.gif');background-size:300px 100%;" height="63" cellspacing="0" cellpadding="0">
+              <tr>
+                <!--// 현재 예약 //-->
+                <td height="25" style="padding-left:8px; font-family:돋움,돋움체; font-size: 9pt; font-weight: bold;">대기자 :  열람실(<font color=#FF0000>0명</font>) 노트북실(<font color=#FF0000>10명</font>)</td>
+                <!--// 알리미 좌석배정확인 //-->
+                                <td><a onclick="pdp();" onfocus="blur()"><img style="cursor:hand" border="0" src="./images/note.gif" alt="알리미"></a></td>
+                              </tr>
+              <tr>
+                <td colspan="2"></td>
+              </tr>
+            </table>
+     </td>
+    </tr>
+    </table>
+
+
+
+
+    <table border="0" width="1000" height="60" cellspacing="0" cellpadding="0" background="./images/bg_top2.jpg">
+    <tr>
+     <td title="현재 좌석현항" width="9"></tD>
+     <td><table border="0" cellspacing="0" cellpadding="0" style="margin:0 0 0 30px;">
+            <!-- <td width="1"></td>
+            <td width="15"><img src="./images/Itotal.gif" alt="전체 좌석수"></td>
+            <td class="total">전체 좌석수 </td>
+            <td width="30" align="right"><font color=#00CCCC><b>60</b></font></td>
+            <td class="total"> 건 </td>
+            <td width="11"></td>
+
+            <td width="15"><img src="./images/Iusing.gif" alt="사용중인 좌석수"></td>
+            <td class="total"> 사용중인 좌석수 </td>
+            <td width="30" align="right"><font color=#FF0000><b>55 </b></font></td>
+            <td class="total"> 건 </td>
+            <td width="11"></td>
+
+            <td  width="15"><img src="./images/Iusecan.gif" alt="사용가능 좌석수"></td>
+            <td class="total"> 사용가능 좌석수 </td>
+            <td width="30" align="right"><font color=#0099FF><b>5 </b></font></td>
+            <td class="total"> 건 </td>
+            <td width="11"></td> -->
+			<tr><td align="center" style="color:#20FFFF; font-family:돋움; font-size: 8pt; font-weight: bold;"> 제1 열람실&nbsp;&nbsp;<br>&nbsp;&nbsp;(칸막이)</td><td width="10"></td><td><img src="./images/Itotal.gif" alt="전체 좌석수"></td><td><font color=#FEF76C><b>162</b></font></td><td width="4"></td><td><img src="./images/Iusing.gif" alt="사용중인 좌석수"></td><td><font color=#FEF76C><b>161 </b></font></td><td width="4"></td><td><img src="./images/Iusecan.gif" alt="사용가능 좌석수"></td><td><font color=#FEF76C><b>1 </b></font></td><td width="4"></td><td width="20"></td><td align="center" style="color:#20FFFF; font-family:돋움; font-size: 8pt; font-weight: bold;"> 제1 열람실&nbsp;&nbsp;<br>&nbsp;&nbsp;(개방)</td><td width="10"></td><td><img src="./images/Itotal.gif" alt="전체 좌석수"></td><td><font color=#FEF76C><b>32</b></font></td><td width="4"></td><td><img src="./images/Iusing.gif" alt="사용중인 좌석수"></td><td><font color=#FEF76C><b>28 </b></font></td><td width="4"></td><td><img src="./images/Iusecan.gif" alt="사용가능 좌석수"></td><td><font color=#FEF76C><b>4 </b></font></td><td width="4"></td><td width="20"></td></tr><tr><td align="center" style="color:#20FFFF; font-family:돋움; font-size: 8pt; font-weight: bold;"> 제2 열람실&nbsp;&nbsp;<br>&nbsp;&nbsp;(칸막이)</td><td width="10"></td><td><img src="./images/Itotal.gif" alt="전체 좌석수"></td><td><font color=#FEF76C><b>176</b></font></td><td width="4"></td><td><img src="./images/Iusing.gif" alt="사용중인 좌석수"></td><td><font color=#FEF76C><b>175 </b></font></td><td width="4"></td><td><img src="./images/Iusecan.gif" alt="사용가능 좌석수"></td><td><font color=#FEF76C><b>1 </b></font></td><td width="4"></td><td width="20"></td><td align="center" style="color:#20FFFF; font-family:돋움; font-size: 8pt; font-weight: bold;"> 제2 열람실&nbsp;&nbsp;<br>&nbsp;&nbsp;(개방)</td><td width="10"></td><td><img src="./images/Itotal.gif" alt="전체 좌석수"></td><td><font color=#FEF76C><b>100</b></font></td><td width="4"></td><td><img src="./images/Iusing.gif" alt="사용중인 좌석수"></td><td><font color=#FEF76C><b>97 </b></font></td><td width="4"></td><td><img src="./images/Iusecan.gif" alt="사용가능 좌석수"></td><td><font color=#FEF76C><b>3 </b></font></td><td width="4"></td><td width="20"></td><td align="center" style="color:#20FFFF; font-family:돋움; font-size: 8pt; font-weight: bold;"> 노트북실</td><td width="10"></td><td><img src="./images/Itotal.gif" alt="전체 좌석수"></td><td><font color=#FEF76C><b>60</b></font></td><td width="4"></td><td><img src="./images/Iusing.gif" alt="사용중인 좌석수"></td><td><font color=#FEF76C><b>55 </b></font></td><td width="4"></td><td><img src="./images/Iusecan.gif" alt="사용가능 좌석수"></td><td><font color=#FEF76C><b>5 </b></font></td><td width="4"></td><td width="20"></td></tr>         </table>
+     </td>
+
+
+          <!-- <td align="right">
+           <table border="0" cellspacing="0" cellpadding="0">
+             <tr valign="middle" class="total8">
+             // 현재 좌석현황 //-
+                                  <td width="15" style=" background-color:rgb(155,189,000); "><IMG WIDTH="15" height="15" SRC="./images/n01.gif"></td>
+                    <td width="2"></td>
+                    <td ><font color="#ffffff">이용가능</font></td>
+                    <td width="3"></td>
+                                   <td width="15" style=" background-color:rgb(245,234,040); "><IMG WIDTH="15" height="15" SRC="./images/n01.gif"></td>
+                    <td width="2"></td>
+                    <td ><font color="#ffffff">사용중</font></td>
+                    <td width="3"></td>
+                                   <td width="15" style=" background-color:rgb(185,185,185); "><IMG WIDTH="15" height="15" SRC="./images/n01.gif"></td>
+                    <td width="2"></td>
+                    <td ><font color="#ffffff">불가</font></td>
+                    <td width="3"></td>
+                                   <td width="15" style=" background-color:rgb(185,185,185); "><IMG WIDTH="15" height="15" SRC="./images/n01.gif"></td>
+                    <td width="2"></td>
+                    <td ><font color="#ffffff">수리</font></td>
+                    <td width="3"></td>
+                                   <td width="15" style=" background-color:rgb(255,255,000); "><IMG WIDTH="15" height="15" SRC="./images/n01.gif"></td>
+                    <td width="2"></td>
+                    <td ><font color="#ffffff">장애우석</font></td>
+                    <td width="3"></td>
+                                   <td width="15" style=" background-color:rgb(185,185,185); "><IMG WIDTH="15" height="15" SRC="./images/n01.gif"></td>
+                    <td width="2"></td>
+                    <td ><font color="#ffffff">고정</font></td>
+                    <td width="3"></td>
+                                   <td width="15" style=" background-color:rgb(185,185,185); "><IMG WIDTH="15" height="15" SRC="./images/n01.gif"></td>
+                    <td width="2"></td>
+                    <td ><font color="#ffffff">일반</font></td>
+                    <td width="3"></td>
+                             <td width="2"></td>
+              </tr>
+             </table>
+                     </td> -->
+    </tr>
+    </table>
+    <table border="0" width="1000" cellspacing="0" cellpadding="0" ><tr><td height="0"></td></tr></table>
+
+    <!--// 좌석 도면표시 //-->
+    <table style="position:absolute;" border="0" width="1000" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+    <tr>
+     <td><img width="1000" height="700" src="./map_image/bg05.jpg"><TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:127.5px; top:91.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(155,189,000);  left:127.5px; top:136.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :16px; text-align: center; font-family:굴림; font-size: 13; color: #003366; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">41</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:127.5px; top:240.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:127.5px; top:286.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:127.5px; top:390.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:127.5px; top:435.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:180px; top:91.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:180px; top:136.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:180px; top:240.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:180px; top:286.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:180px; top:390.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:180px; top:435.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:232.5px; top:91.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:232.5px; top:136.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:232.5px; top:240.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:232.5px; top:286.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:232.5px; top:390.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:232.5px; top:435.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:367.5px; top:91.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:367.5px; top:136.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:367.5px; top:240.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:367.5px; top:286.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(155,189,000);  left:367.5px; top:390.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :16px; text-align: center; font-family:굴림; font-size: 13; color: #003366; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">14</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:367.5px; top:435.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:420px; top:91.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:420px; top:136.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(155,189,000);  left:420px; top:240.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :16px; text-align: center; font-family:굴림; font-size: 13; color: #003366; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">35</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:420px; top:286.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(155,189,000);  left:420px; top:390.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :16px; text-align: center; font-family:굴림; font-size: 13; color: #003366; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">15</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:420px; top:435.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:472.5px; top:91.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:472.5px; top:136.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:472.5px; top:240.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:472.5px; top:286.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:472.5px; top:390.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:472.5px; top:435.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:607.5px; top:91.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:607.5px; top:136.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:607.5px; top:240.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:607.5px; top:286.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:607.5px; top:390.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:607.5px; top:435.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:660px; top:91.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:660px; top:136.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:660px; top:240.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:660px; top:286.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:660px; top:390.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:660px; top:435.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(155,189,000);  left:712.5px; top:91.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :16px; text-align: center; font-family:굴림; font-size: 13; color: #003366; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">59</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:712.5px; top:136.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:712.5px; top:240.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:712.5px; top:286.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:712.5px; top:390.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:712.5px; top:435.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:765px; top:91.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:765px; top:136.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:765px; top:240.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:765px; top:286.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:765px; top:390.25px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 id="" style="position:absolute; background-color:rgb(245,234,040);  left:765px; top:435.75px;">
+<TR>
+<TD><IMG WIDTH=54 height=52 SRC=./images/2.gif><div style=" position: absolute; WIDTH:54px; height:52px; left:0px; top :15px; text-align: center; font-family:굴림; font-size: 12; color: 0033FF; letter-spacing: -0.8px; font-weight: bold;
+margin-left:0px; margin-right:0px; margin-bottom:0px; margin-top:0px; padding-left:0px; padding-right:0px;  padding-bottom:0px; padding-top:0px; ">배정</div></TD>
+</TR>
+
+</TABLE>
+</td>
+    </tr>
+    <!--// 좌석 도면표시 //-->
+
+    <!--// Foot 하단이미지 //-->
+    <tr>
+     <td><img src="./images/btm.gif"></td>
+    </tr>
+    <!--// Foot 하단이미지 //-->
+    </table>
+
+   </td>
+ </tr>
+</table>
+
+
+
+<script language="javascript">
+<!--//
+setTimeout("window.location='./SeatMate.php?classInfo=5'",10000);
+//-->
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
